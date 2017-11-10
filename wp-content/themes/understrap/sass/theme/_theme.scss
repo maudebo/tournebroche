@@ -1,0 +1,619 @@
+@font-face {
+  font-family: 'Bazar';
+  src: url(../fonts/Bazar.ttf);
+}
+@font-face {
+  font-family: 'Audrey';
+  src: url(../fonts/Audrey/Audrey-Normal.otf);
+}
+@font-face {
+  font-family: 'Westmeath';
+  src: url(../fonts/Westmeath.otf);
+}
+body{
+  font-family: 'Oswald', sans-serif;
+
+}
+.wrapper {
+  background: url("../img/background-accueil.jpg");
+  background-size: cover;
+  min-height: 100vh;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 101;
+}
+
+#main-menu {
+  li {
+    a {
+      text-transform: uppercase;
+      font-family: 'Voltaire', sans-serif;
+      font-size: 20px;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+#main-menu ul li.current-menu-item > a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.accueil {
+  padding-top: 5rem;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  a {
+    font-family: 'Bazar';
+
+    font-size: 40px;
+    text-transform: uppercase;
+
+    &:focus {
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.ms-item {
+  width: 50%;
+}
+
+.reservation {
+  padding: 1rem 2rem;
+}
+
+.adresse {
+  margin: 0.5rem 2rem 0.5rem 0;
+  a {
+    color: #ffffff;
+  }
+}
+
+.telephone {
+  padding: 1rem 2rem;
+  margin: 0 1rem 0 0;
+}
+
+.heures {
+  padding: 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  h2 {
+    font-family: 'Westmeath';
+    font-size: 5rem;
+  }
+  p {
+    font-size: 30px;
+  }
+  span {
+    margin-left: 1rem;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+/*                                    TABS                                                   */
+//////////////////////////////////////////////////////////////////////////////////////////////
+::-webkit-scrollbar {
+  width: 0px; /* remove scrollbar space */
+  background: transparent;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+#menu{
+  height: 50vh;
+  overflow-y: scroll;
+}
+@font-face {
+  font-family: 'icomoon';
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Icons created with icomoon.io/app */
+
+.tabs {
+  position: relative;
+  overflow: hidden;
+  margin: 1em 0 2em;
+  font-weight: 300;
+}
+
+/* Nav */
+.tabs nav {
+  text-align: center;
+  border-right: 1px solid #000;
+}
+
+.tabs nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.tabs nav ul li {
+  margin: 0 0.25em;
+  display: block;
+  float: left;
+  position: relative;
+}
+
+.tabs nav li.tab-current {
+  z-index: 100;
+}
+
+.tabs nav li.tab-current:before,
+.tabs nav li.tab-current:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  right: 100%;
+  bottom: 0;
+  width: 1000px;
+}
+
+.tabs nav li.tab-current:after {
+  right: auto;
+  left: 100%;
+  width: 4000px;
+}
+
+.tabs nav a {
+  color: #2d2c2c;
+  display: block;
+  font-size: 2em;
+  line-height: 2.5;
+  padding: 0 1.25em;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tabs nav a:hover {
+  text-decoration: none;
+}
+
+.tabs nav li.tab-current a {
+  text-decoration: none;
+
+}
+
+/* Icons */
+.tabs nav a:before {
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: none;
+  font-weight: normal;
+  font-variant: normal;
+  font-family: 'icomoon';
+  line-height: 1;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  margin: -0.25em 0.4em 0 0;
+}
+
+.icon-food:before {
+  content: "\e600";
+}
+
+.icon-lab:before {
+  content: "\e601";
+}
+
+.icon-cup:before {
+  content: "\e602";
+}
+
+.icon-truck:before {
+  content: "\e603";
+}
+
+.icon-shop:before {
+  content: "\e604";
+}
+
+/* Content */
+.content section {
+  font-size: 1.25em;
+  padding: 3em 1em;
+  display: none;
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+.content section:before,
+.content section:after {
+  content: '';
+  display: table;
+}
+
+.content section:after {
+  clear: both;
+}
+
+/* Fallback example */
+.no-js .content section {
+  display: block;
+  padding-bottom: 2em;
+}
+
+.content section.content-current {
+  display: block;
+}
+
+.mediabox {
+  float: left;
+  width: 50%;
+  height: 30vh;
+  padding: 0 25px;
+}
+
+.mediabox img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.mediabox h3 {
+  margin: 0.75em 0 0.5em;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.mediabox p {
+  padding: 0 0 1em 0;
+  margin: 0;
+  line-height: 1.3;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+/* Example media queries */
+
+@media screen and (max-width: 52.375em) {
+  .tabs nav a span {
+  }
+
+  .tabs nav a:before {
+    margin-right: 0;
+  }
+
+  .mediabox {
+    float: none;
+    width: auto;
+    padding: 0 0 35px 0;
+    font-size: 90%;
+  }
+
+  .mediabox img {
+    float: left;
+    margin: 0 25px 10px 0;
+    max-width: 40%;
+  }
+
+  .mediabox h3 {
+    margin-top: 0;
+  }
+
+  .mediabox p {
+    margin-left: 40%;
+    margin-left: calc(40% + 25px);
+  }
+
+  .mediabox:before,
+  .mediabox:after {
+    content: '';
+    display: table;
+  }
+
+  .mediabox:after {
+    clear: both;
+  }
+}
+
+@media screen and (max-width: 32em) {
+  .tabs nav ul,
+  .tabs nav ul li a {
+    width: 100%;
+    padding: 0;
+  }
+
+  .tabs nav ul li {
+    width: 20%;
+    width: calc(20% + 1px);
+    margin: 0 0 0 -1px;
+  }
+
+  .tabs nav ul li:last-child {
+    border-right: none;
+  }
+
+  .mediabox {
+    text-align: center;
+  }
+
+  .mediabox img {
+    float: none;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .mediabox h3 {
+    margin: 1.25em 0 1em;
+
+  }
+
+  .mediabox p {
+    margin: 0;
+  }
+}
+
+$color-background: #F5F5F5;
+$color-main: #FF5252;
+$color-active: #FFF;
+$color-link: #FFF;
+
+$button-height: 27px;
+$button-width: 35px;
+
+.button_container {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  height: $button-height;
+  width: $button-width;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+  z-index: 103;
+  &:hover {
+    opacity: .7;
+  }
+
+  &.active {
+    .top {
+      transform: translateY(11px) translateX(0) rotate(45deg);
+      background: $color-active;
+    }
+    .middle {
+      opacity: 0;
+      background: $color-active;
+    }
+
+    .bottom {
+      transform: translateY(-11px) translateX(0) rotate(-45deg);
+      background: $color-active;
+    }
+  }
+
+  span {
+    background: $color-main;
+    border: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .35s ease;
+    cursor: pointer;
+
+    &:nth-of-type(2) {
+      top: 11px;
+    }
+
+    &:nth-of-type(3) {
+      top: 22px;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  background: $color-main;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  z-index: 102;
+
+  &.open {
+    opacity: .9;
+    visibility: visible;
+    height: 100%;
+
+    .col-lg-6 {
+      animation: fadeInRight .5s ease forwards;
+      animation-delay: .35s;
+
+      &:nth-of-type(2) {
+        animation-delay: .4s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .45s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: .50s;
+      }
+    }
+  }
+  nav {
+    position: relative;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    font-family: 'Vollkorn', serif;
+    font-weight: 400;
+    text-align: center;
+    .row {
+      padding: 5rem 0;
+    }
+    .col-lg-6 {
+      display: block;
+      height: 25%;
+      height: calc(100% / 4);
+      min-height: 50px;
+      position: relative;
+      opacity: 0;
+
+      h2 {
+        font-family: 'Westmeath';
+        display: block;
+        position: relative;
+        color: $color-link;
+        text-decoration: none;
+        overflow: hidden;
+
+        &:hover:after,
+        &:focus:after,
+        &:active:after {
+          width: 50%;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0%;
+          transform: translateX(-50%);
+          height: 3px;
+          background: $color-link;
+          transition: .35s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+/////////////////*************************** EQUIPE
+
+.equipe{
+  .col-lg-6{
+    min-height: 70vh;
+
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .equipe-row{
+    min-height: 70vh;
+    align-items: center;
+    .col-lg-6:nth-of-type(2){
+      padding: 0 50px;
+    }
+  }
+  .equipe-row:nth-of-type(odd){
+    display: flex;
+    flex-direction: row;
+  }
+  .equipe-row:nth-of-type(even){
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+
+}
+.image-equipe
+{
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: all ease-in-out .5s;
+  &:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all ease-in-out .7s;
+  }
+  &:hover{
+    color: rgba(0, 0, 0, 0);
+  }
+
+}
+.image-equipe:hover::after, .image-equipe:hover, .image-equipe:hover img{
+  filter: none;
+  -webkit-filter: none;
+  /*   mix-blend-mode: color-dodge !important; */
+  background: transparent!important;
+}
+.yellow{
+
+  background-color: #fe3e30!important;
+}
+.yellow img{
+  mix-blend-mode: multiply;
+  -webkit-filter: grayscale(100%) contrast(3);
+  filter: grayscale(100%) contrast(3);
+}
+.yellow img:hover{
+  mix-blend-mode: multiply;
+  -webkit-filter:none;
+  filter:none;
+}
+
+//////////////////////////////////*****************  ENTRE-SECTION
+
+.entre-section{
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1{
+    text-transform: uppercase;
+    font-family: 'Westmeath';
+    font-size: 5rem;
+
+  }
+
+
+}
